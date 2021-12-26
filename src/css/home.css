@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: #291B25;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+
+.display-elements {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+
+.titles {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.firstname,
+.lastname {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #f6f6e9;
+    margin-top: 1rem;
+    font-size: 3rem;
+   
+}
+
+.firstname {
+    margin-right: 4rem;
+}
+
+.lastname {
+    margin-left: 4rem;
+    padding-bottom: 5rem;
+    
+}
+
+.job-title {
+    font-family: 'Rochester', cursive;
+    color: #f6f6e9;
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+.flower-container {
+    width: 51%;
+    height: 100vh;
+    background-image: url("../assets/flowers.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.arrow{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 8px solid #b9b9b9;
+    border-right: 8px solid #b9b9b9;
+    transform: rotate(45deg);
+    margin: -8px;
+    animation: animate 2s infinite;
+    box-shadow: 2px 2px 1px 1px rgb(255, 255, 255); 
+  }
+
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
